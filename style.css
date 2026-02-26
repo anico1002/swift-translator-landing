@@ -487,6 +487,7 @@ kbd {
   transform: translateY(-2px);
 }
 .lang-flag { font-size: 28px; line-height: 1; }
+.lang-flag-ca svg { width: 28px; height: auto; display: block; border-radius: 3px; }
 .lang-name { font-size: 13px; color: var(--text-2); font-weight: 500; }
 
 /* ─── DOWNLOAD CTA ─── */
