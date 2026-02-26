@@ -184,51 +184,16 @@ kbd {
 }
 
 /* Notification mockup */
-.notif-mockup {
-  margin-top: 24px;
+.demo-gif-wrap {
+  margin-top: 32px;
 }
-.notif-card {
-  background: var(--bg);
-  border: 1px solid var(--border);
+.demo-gif {
+  width: 100%;
+  max-width: 560px;
   border-radius: 16px;
   box-shadow: var(--shadow-md);
-  padding: 14px 18px;
-  min-width: 280px;
-  text-align: left;
-}
-.notif-header {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 10px;
-}
-.notif-app-icon {
-  width: 20px;
-  height: 20px;
-  border-radius: 5px;
-}
-.notif-app-name {
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--text);
-  flex: 1;
-}
-.notif-time {
-  font-size: 12px;
-  color: var(--text-3);
-}
-.notif-direction {
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--accent);
-  margin-bottom: 4px;
-  text-transform: uppercase;
-  letter-spacing: .5px;
-}
-.notif-text {
-  font-size: 15px;
-  color: var(--text);
-  font-weight: 400;
+  display: block;
+  margin: 0 auto;
 }
 
 /* ─── TRUST BAR ─── */
