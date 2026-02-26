@@ -196,6 +196,7 @@ kbd {
   border-radius: 14px;
   box-shadow: var(--shadow-md);
   overflow: hidden;
+  position: relative;
 }
 .sdemo-tl {
   background: #f2f2f2;
@@ -216,10 +217,16 @@ kbd {
   font-size: 26px; font-weight: 400;
   color: var(--text); line-height: 1.3;
   min-height: 1.3em;
-  transition: opacity .18s ease, transform .18s ease;
+  border-radius: 4px;
+  padding: 2px 4px;
+  margin: -2px -4px;
+  transition: opacity .18s ease, transform .18s ease, background .2s ease;
 }
 .sdemo-para.sdemo-out {
   opacity: 0; transform: translateY(-5px);
+}
+.sdemo-para.sdemo-selecting {
+  background: rgba(124,58,237,.14);
 }
 @keyframes sdemo-in {
   from { opacity: 0; transform: translateY(5px); }
@@ -227,6 +234,28 @@ kbd {
 }
 .sdemo-para.sdemo-in {
   animation: sdemo-in .2s ease forwards;
+}
+
+/* Keyboard shortcut badge */
+.sdemo-kbd {
+  position: absolute; bottom: 16px; right: 16px;
+  display: flex; gap: 3px;
+  background: rgba(255,255,255,.92);
+  backdrop-filter: blur(8px);
+  padding: 5px 10px;
+  border-radius: 7px;
+  border: 1px solid var(--border);
+  box-shadow: 0 2px 8px rgba(0,0,0,.1);
+  opacity: 0;
+  transform: scale(.9);
+  transition: opacity .15s ease, transform .15s ease;
+}
+.sdemo-kbd.sdemo-kbd-show {
+  opacity: 1; transform: scale(1);
+}
+.sdemo-kbd kbd {
+  font-family: var(--font); font-size: 13px;
+  font-weight: 500; color: var(--text);
 }
 
 /* ─── TRUST BAR ─── */
