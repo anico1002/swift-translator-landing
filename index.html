@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SwifT — Translate anything. One shortcut.</title>
+  <meta name="description" content="SwifT lives in your menu bar and translates any selected text with ⌥⌘T. No copy-paste. No browser tabs. No interruptions.">
+  <meta property="og:title" content="SwifT — Translate anything. One shortcut.">
+  <meta property="og:description" content="SwifT lives in your menu bar and translates any selected text with ⌥⌘T. No copy-paste. No browser tabs. No interruptions.">
+  <meta property="og:image" content="assets/app-icon.png">
+  <link rel="icon" type="image/png" href="assets/app-icon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ─── NAVBAR ─── -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a class="nav-logo" href="#">
+        <img src="assets/app-icon.png" alt="SwifT" class="nav-icon">
+        <span class="nav-name">SwifT Translator</span>
+      </a>
+      <div class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#how">How it works</a>
+        <a href="#engines">Engines</a>
+        <a href="#languages">Languages</a>
+      </div>
+      <a href="assets/SwifT_v1.0.dmg" class="btn btn-sm" download>
+        Download — Free
+      </a>
+    </div>
+  </nav>
+
+  <!-- ─── HERO ─── -->
+  <section class="hero">
+    <div class="hero-inner">
+      <img src="assets/app-icon.png"
+           srcset="assets/app-icon.png 1x, assets/app-icon@2x.png 2x"
+           alt="SwifT app icon"
+           class="hero-icon animate">
+
+      <h1 class="animate delay-1">
+        Translate anything.<br>One shortcut.
+      </h1>
+
+      <p class="hero-sub animate delay-2">
+        SwifT lives in your menu bar and translates any selected text with
+        <span class="kbd-group"><kbd>⌥</kbd><kbd>⌘</kbd><kbd>T</kbd></span>.
+        No copy-paste. No browser tabs. No interruptions.
+      </p>
+
+      <div class="hero-cta animate delay-3">
+        <a href="assets/SwifT_v1.0.dmg" class="btn btn-lg" download>
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M10 2v11M5 9l5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M3 16h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+          Download for Mac — Free
+        </a>
+        <p class="hero-badge">macOS 13 Ventura or later · No account required · Free forever</p>
+      </div>
+
+      <!-- macOS Notification mockup -->
+      <div class="notif-mockup animate delay-4">
+        <div class="notif-card">
+          <div class="notif-header">
+            <img src="assets/app-icon.png" alt="" class="notif-app-icon">
+            <span class="notif-app-name">SwifT</span>
+            <span class="notif-time">now</span>
+          </div>
+          <div class="notif-body">
+            <p class="notif-direction">ES → EN</p>
+            <p class="notif-text">"Hello, world"</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── TRUST BAR ─── -->
+  <div class="trust-bar">
+    <div class="trust-inner">
+      <span>✦ Powered by Apple Translation</span>
+      <span class="trust-sep" aria-hidden="true">·</span>
+      <span>✦ No account required</span>
+      <span class="trust-sep" aria-hidden="true">·</span>
+      <span>✦ No API key needed</span>
+      <span class="trust-sep" aria-hidden="true">·</span>
+      <span>✦ macOS 13+</span>
+      <span class="trust-sep" aria-hidden="true">·</span>
+      <span>✦ Free forever</span>
+    </div>
+  </div>
+
+  <!-- ─── FEATURES ─── -->
+  <section id="features" class="section section-alt">
+    <div class="container">
+      <div class="section-label">Features</div>
+      <h2 class="section-title">Everything you need.<br>Nothing you don't.</h2>
+
+      <div class="features-grid">
+
+        <div class="feature-card animate">
+          <div class="feature-icon-wrap">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+              <path d="M4 6h20M4 12h14M4 18h8" stroke="#7C3AED" stroke-width="1.8" stroke-linecap="round"/>
+              <circle cx="22" cy="20" r="5.5" stroke="#7C3AED" stroke-width="1.6"/>
+              <path d="M20 20l1.5 1.5L24 18" stroke="#7C3AED" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>Select &amp; translate</h3>
+          <p>Select text in any app — Xcode, Safari, Slack, PDFs — press
+            <span class="kbd-group"><kbd>⌥</kbd><kbd>⌘</kbd><kbd>T</kbd></span>
+            and you're done. Works everywhere, system-wide.
+          </p>
+        </div>
+
+        <div class="feature-card animate">
+          <div class="feature-icon-wrap">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+              <path d="M5 14h18" stroke="#7C3AED" stroke-width="1.8" stroke-linecap="round"/>
+              <path d="M17 8l6 6-6 6" stroke="#7C3AED" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M11 20l-6-6 6-6" stroke="#7C3AED" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>Auto-flip</h3>
+          <p>Writing in Spanish but need it in English? SwifT detects
+            the language direction automatically and flips when needed.
+            Bidirectional, always.
+          </p>
+        </div>
+
+        <div class="feature-card animate">
+          <div class="feature-icon-wrap">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+              <path d="M14 4C8.477 4 4 8.477 4 14s4.477 10 10 10 10-4.477 10-10" stroke="#7C3AED" stroke-width="1.8" stroke-linecap="round"/>
+              <path d="M20 4l4 4-4 4" stroke="#7C3AED" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M10 14l3 3 5-5" stroke="#7C3AED" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>Powered by Apple</h3>
+          <p>Uses Apple's on-device Translation framework on macOS 26+.
+            Falls back to Google Translate gracefully — no API key,
+            no setup, no account.
+          </p>
+        </div>
+
+        <div class="feature-card animate">
+          <div class="feature-icon-wrap">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+              <rect x="10" y="3" width="8" height="13" rx="2.5" stroke="#7C3AED" stroke-width="1.8"/>
+              <path d="M14 16v7M10 23h8" stroke="#7C3AED" stroke-width="1.8" stroke-linecap="round"/>
+              <circle cx="14" cy="9.5" r="1.5" fill="#7C3AED"/>
+            </svg>
+          </div>
+          <h3>Stays out of your way</h3>
+          <p>Lives quietly in the menu bar. No Dock icon, no onboarding
+            screens, no subscriptions. Set it up once, forget about it.
+            Launches at login.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── HOW IT WORKS ─── -->
+  <section id="how" class="section">
+    <div class="container">
+      <div class="section-label">How it works</div>
+      <h2 class="section-title">Three steps.<br>That's it.</h2>
+
+      <div class="steps">
+
+        <div class="step animate">
+          <div class="step-num">01</div>
+          <div class="step-icon-wrap">
+            <svg width="44" height="44" viewBox="0 0 44 44" fill="none" aria-hidden="true">
+              <rect x="6" y="8" width="32" height="28" rx="4" fill="#F5F5F7" stroke="#D1D1D6" stroke-width="1.4"/>
+              <path d="M12 17h10M12 22h20M12 27h8" stroke="#8E8E93" stroke-width="1.5" stroke-linecap="round"/>
+              <rect x="24" y="19" width="8" height="6" rx="1.5" fill="#7C3AED" opacity=".9"/>
+            </svg>
+          </div>
+          <h3>Select any text</h3>
+          <p>In any app — Safari, Xcode, Slack, Notes, Terminal — select the text you want to translate.</p>
+        </div>
+
+        <div class="step-arrow" aria-hidden="true">
+          <svg width="36" height="16" viewBox="0 0 36 16" fill="none">
+            <path d="M1 8h32M27 3l6 5-6 5" stroke="#D1D1D6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+
+        <div class="step animate">
+          <div class="step-num">02</div>
+          <div class="step-icon-wrap step-kbd-wrap">
+            <kbd class="step-kbd">⌥</kbd>
+            <kbd class="step-kbd">⌘</kbd>
+            <kbd class="step-kbd">T</kbd>
+          </div>
+          <h3>Press <span class="kbd-group"><kbd>⌥</kbd><kbd>⌘</kbd><kbd>T</kbd></span></h3>
+          <p>Your global shortcut. Works even when SwifT is not the focused app. Fully customizable.</p>
+        </div>
+
+        <div class="step-arrow" aria-hidden="true">
+          <svg width="36" height="16" viewBox="0 0 36 16" fill="none">
+            <path d="M1 8h32M27 3l6 5-6 5" stroke="#D1D1D6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+
+        <div class="step animate">
+          <div class="step-num">03</div>
+          <div class="step-icon-wrap">
+            <svg width="44" height="44" viewBox="0 0 44 44" fill="none" aria-hidden="true">
+              <rect x="6" y="14" width="32" height="22" rx="5" fill="#F5F5F7" stroke="#D1D1D6" stroke-width="1.4"/>
+              <path d="M13 24h10M13 29h6" stroke="#1D1D1F" stroke-width="1.4" stroke-linecap="round"/>
+              <circle cx="36" cy="14" r="9" fill="#34C759"/>
+              <path d="M32 14l2.5 2.5L39 11" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>Done</h3>
+          <p>Translation appears as a macOS notification. Optionally replaces the selected text in-place.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── TRANSLATION ENGINES ─── -->
+  <section id="engines" class="section section-alt">
+    <div class="container">
+      <div class="section-label">Translation engines</div>
+      <h2 class="section-title">Three engines.<br>Zero setup.</h2>
+      <p class="section-sub">SwifT picks the best available engine and falls back automatically. You can always choose manually in Settings.</p>
+
+      <div class="engines-grid">
+
+        <div class="engine-card animate">
+          <div class="engine-logo">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+              <path d="M28 12c.6-2.4-1.2-4.8-3.6-5.4-.6 2.4 1.2 4.8 3.6 5.4z" fill="#1D1D1F"/>
+              <path d="M22 15.5c-3 0-6 3-6 7.2 0 5.4 4.2 12 7.8 12 1.8 0 2.4-1.2 4.2-1.2s2.4 1.2 4.2 1.2c3.6 0 6.6-6.6 6.6-12 0-4.2-3-7.2-6.6-7.2-1.8 0-3 .6-3.6.6s-1.2-.6-3.6-.6z" fill="#1D1D1F"/>
+            </svg>
+          </div>
+          <div class="engine-info">
+            <h3>Apple Translation</h3>
+            <p class="engine-label">On-device · Private · macOS 26+</p>
+            <p>Runs entirely on your Mac using Apple's Translation framework. No data leaves your device.</p>
+          </div>
+          <span class="engine-badge engine-badge-primary">Preferred</span>
+        </div>
+
+        <div class="engine-card animate">
+          <div class="engine-logo">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+              <path d="M34.6 20.5c0-1-.1-1.8-.3-2.7H20v5h8.1c-.4 1.8-1.5 3.4-3.1 4.4v3.6h5c2.9-2.7 4.6-6.7 4.6-10.3z" fill="#4285F4"/>
+              <path d="M20 36c4.1 0 7.5-1.4 10-3.7l-5-3.6c-1.4.9-3.1 1.5-5 1.5-3.8 0-7-2.6-8.2-6H6.6v3.7C9.1 33.5 14.1 36 20 36z" fill="#34A853"/>
+              <path d="M11.8 24.2c-.3-.9-.5-1.8-.5-2.8s.2-1.9.5-2.8v-3.7H6.6C5.6 17 5 18.4 5 20s.6 3 1.6 4.2l5.2-3.8v3.8z" fill="#FBBC05"/>
+              <path d="M20 12.8c2.3 0 4.3.8 5.9 2.3l4.4-4.4C27.5 8 24.1 6.6 20 6.6c-5.9 0-11 3.1-13.4 7.7l5.2 3.7c1.2-3.4 4.4-5.2 8.2-5.2z" fill="#EA4335"/>
+            </svg>
+          </div>
+          <div class="engine-info">
+            <h3>Google Translate</h3>
+            <p class="engine-label">Fast · Reliable · No key needed</p>
+            <p>The world's most used translation service. No API key, no account, works out of the box.</p>
+          </div>
+          <span class="engine-badge">Fallback #1</span>
+        </div>
+
+        <div class="engine-card animate">
+          <div class="engine-logo">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+              <circle cx="20" cy="20" r="14" stroke="#5856D6" stroke-width="1.8"/>
+              <ellipse cx="20" cy="20" rx="6" ry="14" stroke="#5856D6" stroke-width="1.4"/>
+              <path d="M7 20h26" stroke="#5856D6" stroke-width="1.4" stroke-linecap="round"/>
+              <path d="M8.5 14h23M8.5 26h23" stroke="#5856D6" stroke-width="1.2" stroke-linecap="round" opacity=".5"/>
+            </svg>
+          </div>
+          <div class="engine-info">
+            <h3>MyMemory</h3>
+            <p class="engine-label">Open · Always available</p>
+            <p>Open translation API with 5,000 characters/day on the free tier. Ultimate fallback.</p>
+          </div>
+          <span class="engine-badge">Fallback #2</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── LANGUAGES ─── -->
+  <section id="languages" class="section">
+    <div class="container">
+      <div class="section-label">Languages</div>
+      <h2 class="section-title">12 languages.<br>More coming.</h2>
+
+      <div class="lang-grid">
+        <div class="lang-item animate"><span class="lang-flag">🇬🇧</span><span class="lang-name">English</span></div>
+        <div class="lang-item animate"><span class="lang-flag">🇪🇸</span><span class="lang-name">Spanish</span></div>
+        <div class="lang-item animate"><span class="lang-flag">🇦🇩</span><span class="lang-name">Catalan</span></div>
+        <div class="lang-item animate"><span class="lang-flag">🇫🇷</span><span class="lang-name">French</span></div>
+        <div class="lang-item animate"><span class="lang-flag">🇩🇪</span><span class="lang-name">German</span></div>
+        <div class="lang-item animate"><span class="lang-flag">🇮🇹</span><span class="lang-name">Italian</span></div>
+        <div class="lang-item animate"><span class="lang-flag">🇵🇹</span><span class="lang-name">Portuguese</span></div>
+        <div class="lang-item animate"><span class="lang-flag">🇷🇺</span><span class="lang-name">Russian</span></div>
+        <div class="lang-item animate"><span class="lang-flag">🇨🇳</span><span class="lang-name">Chinese</span></div>
+        <div class="lang-item animate"><span class="lang-flag">🇯🇵</span><span class="lang-name">Japanese</span></div>
+        <div class="lang-item animate"><span class="lang-flag">🇰🇷</span><span class="lang-name">Korean</span></div>
+        <div class="lang-item animate"><span class="lang-flag">🇸🇦</span><span class="lang-name">Arabic</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── DOWNLOAD CTA ─── -->
+  <section id="download" class="section download-section">
+    <div class="container">
+      <img src="assets/app-icon.png"
+           srcset="assets/app-icon.png 1x, assets/app-icon@2x.png 2x"
+           alt="SwifT"
+           class="download-icon animate">
+      <h2 class="animate delay-1">Start translating<br>in 30 seconds.</h2>
+      <a href="assets/SwifT_v1.0.dmg" class="btn btn-lg animate delay-2" download>
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+          <path d="M10 2v11M5 9l5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M3 16h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+        Download SwifT — Free
+      </a>
+      <p class="download-badge animate delay-3">macOS 13 Ventura or later · ~4 MB · No account required</p>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ─── -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-logo">
+        <img src="assets/app-icon.png" alt="SwifT" class="footer-icon">
+        <span>SwifT Translator</span>
+      </div>
+      <p class="footer-tagline">Made with ♥ by anico</p>
+      <p class="footer-copy">© 2026 All rights reserved · SwifT v1.0</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
