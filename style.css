@@ -467,7 +467,7 @@ kbd {
 /* ─── LANGUAGES ─── */
 .lang-grid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(7, 1fr);
   gap: 16px;
 }
 
@@ -487,7 +487,7 @@ kbd {
   transform: translateY(-2px);
 }
 .lang-flag { font-size: 28px; line-height: 1; }
-.lang-flag-ca svg { width: 28px; height: auto; display: block; border-radius: 3px; }
+.lang-flag .fi { border-radius: 3px; }
 .lang-name { font-size: 13px; color: var(--text-2); font-weight: 500; }
 
 /* ─── DOWNLOAD CTA ─── */
@@ -560,7 +560,7 @@ kbd {
 @media (max-width: 760px) {
   .nav-links { display: none; }
   .features-grid { grid-template-columns: 1fr; }
-  .lang-grid { grid-template-columns: repeat(3, 1fr); }
+  .lang-grid { grid-template-columns: repeat(4, 1fr); }
 
   .steps {
     flex-direction: column;
