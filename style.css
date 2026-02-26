@@ -217,16 +217,10 @@ kbd {
   font-size: 26px; font-weight: 400;
   color: var(--text); line-height: 1.3;
   min-height: 1.3em;
-  border-radius: 4px;
-  padding: 2px 4px;
-  margin: -2px -4px;
-  transition: opacity .18s ease, transform .18s ease, background .2s ease;
+  transition: opacity .18s ease, transform .18s ease;
 }
 .sdemo-para.sdemo-out {
   opacity: 0; transform: translateY(-5px);
-}
-.sdemo-para.sdemo-selecting {
-  background: rgba(124,58,237,.14);
 }
 @keyframes sdemo-in {
   from { opacity: 0; transform: translateY(5px); }
@@ -234,6 +228,22 @@ kbd {
 }
 .sdemo-para.sdemo-in {
   animation: sdemo-in .2s ease forwards;
+}
+
+/* Text selection highlight — sweeps right-to-left */
+#sdemo-text {
+  display: inline;
+  background-image: linear-gradient(rgba(124,58,237,.18), rgba(124,58,237,.18));
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 0% 100%;
+  border-radius: 3px;
+  padding: 1px 3px;
+  margin: -1px -3px;
+  transition: background-size .42s cubic-bezier(.4,0,.2,1);
+}
+#sdemo-text.sdemo-selecting {
+  background-size: 100% 100%;
 }
 
 /* Keyboard shortcut badge */

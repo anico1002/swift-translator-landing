@@ -228,11 +228,12 @@ const SDEMO = [
 ];
 
 (function () {
-  const para   = document.getElementById('sdemo-text');
+  const para        = document.getElementById('sdemo-text');   // <span> — content + selection
+  const paraWrapper = para ? para.closest('.sdemo-para') : null; // <p>  — fade in/out
   const langEl = document.getElementById('sdemo-lang');
   const kbd    = document.querySelector('.sdemo-kbd');
   const wrap   = document.querySelector('.swift-demo');
-  if (!para || !langEl || !kbd || !wrap) return;
+  if (!para || !paraWrapper || !langEl || !kbd || !wrap) return;
 
   let idx = 0;
   let started = false;
@@ -242,33 +243,33 @@ const SDEMO = [
     para.classList.remove('sdemo-selecting');
     kbd.classList.remove('sdemo-kbd-show');
 
-    // 2. Fade out text
-    para.classList.add('sdemo-out');
+    // 2. Fade out the <p> wrapper
+    paraWrapper.classList.add('sdemo-out');
 
     setTimeout(() => {
-      // 3. Swap content
+      // 3. Swap content on the <span>
       idx = (idx + 1) % SDEMO.length;
       const item = SDEMO[idx];
       para.textContent = item.text;
-      para.dir = item.dir;
+      paraWrapper.dir = item.dir;
       langEl.textContent = item.lang;
 
-      // 4. Fade in
-      para.classList.remove('sdemo-out');
-      para.classList.add('sdemo-in');
-      setTimeout(() => para.classList.remove('sdemo-in'), 220);
+      // 4. Fade the <p> back in
+      paraWrapper.classList.remove('sdemo-out');
+      paraWrapper.classList.add('sdemo-in');
+      setTimeout(() => paraWrapper.classList.remove('sdemo-in'), 220);
 
-      // 5. Selection highlight
-      setTimeout(() => para.classList.add('sdemo-selecting'), 160);
+      // 5. Selection sweeps right → left on the <span>
+      setTimeout(() => para.classList.add('sdemo-selecting'), 180);
 
-      // 6. Keyboard shortcut
-      setTimeout(() => kbd.classList.add('sdemo-kbd-show'), 400);
+      // 6. Keyboard shortcut appears
+      setTimeout(() => kbd.classList.add('sdemo-kbd-show'), 460);
 
       // 7. Fade both out before next tick
       setTimeout(() => {
         kbd.classList.remove('sdemo-kbd-show');
         para.classList.remove('sdemo-selecting');
-      }, 820);
+      }, 1020);
 
     }, 190);
   }
@@ -278,12 +279,12 @@ const SDEMO = [
       started = true;
       // Trigger selection on first text immediately
       setTimeout(() => para.classList.add('sdemo-selecting'), 300);
-      setTimeout(() => kbd.classList.add('sdemo-kbd-show'), 540);
+      setTimeout(() => kbd.classList.add('sdemo-kbd-show'), 580);
       setTimeout(() => {
         kbd.classList.remove('sdemo-kbd-show');
         para.classList.remove('sdemo-selecting');
-      }, 940);
-      setInterval(tick, 1400);
+      }, 1000);
+      setInterval(tick, 1800);
     }
   }, { threshold: 0.4 });
   obs.observe(wrap);
