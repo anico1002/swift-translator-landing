@@ -239,52 +239,40 @@ const SDEMO = [
   let started = false;
 
   function tick() {
-    // 1. Reset selection + kbd
-    para.classList.remove('sdemo-selecting');
-    kbd.classList.remove('sdemo-kbd-show');
+    // 1. Selection sweeps right → left on current text
+    para.classList.add('sdemo-selecting');
 
-    // 2. Fade out the <p> wrapper
-    paraWrapper.classList.add('sdemo-out');
+    // 2. Keyboard shortcut badge appears
+    setTimeout(() => kbd.classList.add('sdemo-kbd-show'), 480);
 
+    // 3. Both fade out, then text wrapper fades out
     setTimeout(() => {
-      // 3. Swap content on the <span>
+      kbd.classList.remove('sdemo-kbd-show');
+      para.classList.remove('sdemo-selecting');
+      paraWrapper.classList.add('sdemo-out');
+    }, 1040);
+
+    // 4. Swap to next language and fade in
+    setTimeout(() => {
       idx = (idx + 1) % SDEMO.length;
       const item = SDEMO[idx];
       para.textContent = item.text;
       paraWrapper.dir = item.dir;
       langEl.textContent = item.lang;
 
-      // 4. Fade the <p> back in
       paraWrapper.classList.remove('sdemo-out');
       paraWrapper.classList.add('sdemo-in');
       setTimeout(() => paraWrapper.classList.remove('sdemo-in'), 220);
-
-      // 5. Selection sweeps right → left on the <span>
-      setTimeout(() => para.classList.add('sdemo-selecting'), 180);
-
-      // 6. Keyboard shortcut appears
-      setTimeout(() => kbd.classList.add('sdemo-kbd-show'), 460);
-
-      // 7. Fade both out before next tick
-      setTimeout(() => {
-        kbd.classList.remove('sdemo-kbd-show');
-        para.classList.remove('sdemo-selecting');
-      }, 1020);
-
-    }, 190);
+    }, 1240);
   }
 
   const obs = new IntersectionObserver((entries) => {
     if (entries[0].isIntersecting && !started) {
       started = true;
-      // Trigger selection on first text immediately
-      setTimeout(() => para.classList.add('sdemo-selecting'), 300);
-      setTimeout(() => kbd.classList.add('sdemo-kbd-show'), 580);
       setTimeout(() => {
-        kbd.classList.remove('sdemo-kbd-show');
-        para.classList.remove('sdemo-selecting');
-      }, 1000);
-      setInterval(tick, 1800);
+        tick();
+        setInterval(tick, 2200);
+      }, 500);
     }
   }, { threshold: 0.4 });
   obs.observe(wrap);
