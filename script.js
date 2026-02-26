@@ -216,6 +216,49 @@ const observer = new IntersectionObserver(
 
 document.querySelectorAll('.animate').forEach((el) => observer.observe(el));
 
+/* ── Hero translation demo ── */
+const SDEMO = [
+  { lang: 'ES', text: 'Hola Mundo',        dir: 'ltr' },
+  { lang: 'EN', text: 'Hello World',        dir: 'ltr' },
+  { lang: 'FR', text: 'Bonjour le Monde',   dir: 'ltr' },
+  { lang: 'DE', text: 'Hallo Welt',         dir: 'ltr' },
+  { lang: 'IT', text: 'Ciao Mondo',         dir: 'ltr' },
+  { lang: 'ZH', text: '你好，世界',          dir: 'ltr' },
+  { lang: 'AR', text: 'مرحبا بالعالم',      dir: 'rtl' },
+];
+
+(function () {
+  const para = document.getElementById('sdemo-text');
+  const langEl = document.getElementById('sdemo-lang');
+  const wrap = document.querySelector('.swift-demo');
+  if (!para || !langEl || !wrap) return;
+
+  let idx = 0;
+  let started = false;
+
+  function tick() {
+    para.classList.add('sdemo-out');
+    setTimeout(() => {
+      idx = (idx + 1) % SDEMO.length;
+      const item = SDEMO[idx];
+      para.textContent = item.text;
+      para.dir = item.dir;
+      langEl.textContent = item.lang;
+      para.classList.remove('sdemo-out');
+      para.classList.add('sdemo-in');
+      setTimeout(() => para.classList.remove('sdemo-in'), 220);
+    }, 190);
+  }
+
+  const obs = new IntersectionObserver((entries) => {
+    if (entries[0].isIntersecting && !started) {
+      started = true;
+      setInterval(tick, 1400);
+    }
+  }, { threshold: 0.4 });
+  obs.observe(wrap);
+}());
+
 /* ── Stagger children within grids ── */
 const staggerParents = ['.features-grid', '.lang-grid'];
 
